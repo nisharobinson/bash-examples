@@ -1,0 +1,26 @@
+#!/bin/bash
+
+domain_check() {
+	# args
+	local host="$1";
+	local iterations="$2";
+	local delay="$3";
+	
+	# check domains
+	local x=0;
+	for ((y=1; y<="$iterations"; y++)); do
+		host "$host" &>/dev/null && ((x++));
+		echo -ne "\\rDomain: ${host} ${x}/${y}";
+		sleep "$delay";
+	done;
+	echo "";
+}
+
+# domains to test
+domains=('google.com' 'twitter.com' 'discord.com' 'facebook.com' 
+'instagram.com' 'microsoft.com' 'debian.org');
+
+# loop through domains
+for i in "${domains[@]}"; do
+	domain_check "$i" 100 1;
+done;
