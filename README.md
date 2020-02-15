@@ -1,6 +1,7 @@
 # Bash Examples
 
-## Examples
+## Description
+Various small projects written in Bash.
 
 ### Host Check
 Host Check is a bash script that uses the host command to check how reliable your DNS requests are.
