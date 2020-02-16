@@ -1,4 +1,4 @@
-# Bash Examples
+# Bash Projects
 
 ## Description
 Various small projects written in Bash.
